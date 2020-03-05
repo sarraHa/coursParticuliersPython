@@ -1,4 +1,5 @@
 
+
 #Ecrire un algorithme, puis un programme, qui attend une suite de 4 chiffres de maniere
 #a representer un nombre entier. L utilisateur devra pouvoir effectuer des saisies successives et
 #l algorithme acceptera tout caractere saisi mais :
@@ -23,7 +24,9 @@
 
 
 def afficheCaractere():
-	return
+	print("saisissez un caractere")
+	c = raw_input()
+	print("vous avez saisi : ", c)
 
 #afficheCaractere()
 
@@ -43,7 +46,11 @@ def afficheCaractere():
 
 
 def afficheCaractereS():
-	return
+	#on peut faire while(1)
+	while(True):
+		print("saisissez un caractere")
+		c = raw_input()
+		print("vous avez saisi : ", c)
 
 #afficheCaractereS()
 
@@ -52,7 +59,12 @@ def afficheCaractereS():
 
 
 def affiche4CaractereS():
-	return
+	nbChiffre = 0
+	while(nbChiffre < 4):
+		print("saisissez un caractere")
+		c = raw_input()
+		print("vous avez saisi : ", c)
+		nbChiffre = nbChiffre + 1
 
 #affiche4CaractereS()
 
@@ -74,7 +86,13 @@ def affiche4CaractereS():
 #...
 
 def affiche4Chiffres():
-	return
+	nbChiffre = 0
+	while(nbChiffre < 4):
+		print("saisissez un chiffre")
+		c = raw_input()
+		if(c.isdigit() == True):
+			print("vous avez saisi : ", c)
+			nbChiffre = nbChiffre + 1
 
 #affiche4Chiffres()
 
@@ -85,7 +103,9 @@ def affiche4Chiffres():
 # indication : ord(c)
 
 def afficheCodeAscii(c):
-	return
+	codeAscii = ord(c)
+	print("le code ascii de ", c, "est : ", codeAscii)
+
 
 #afficheCodeAscii('1')
 
@@ -95,14 +115,23 @@ def afficheCodeAscii(c):
 
 
 def afficheCaractereDeCodeAscii(codeAscii):
-    return
+	c = chr(codeAscii)
+	print("le caractere qui corespond au code ascii ", codeAscii, "est : ", c)
+
 
 #afficheCaractereDeCodeAscii(60)
 
 #ecrivez mnt la fonction avec en utilisant le code Ascii
 
 def affiche4Chiffres2():
-	return
+	nbChiffre = 0
+	while(nbChiffre < 4):
+		print("saisissez un chiffre")
+		c = raw_input()
+		if( ord(c) >= 48 and ord(c) <= 59):
+			#si le programme arrive la c'est a dire l'utilisateur a bien saisi un chiffre et pas un caractere
+			print("vous avez saisi : ", c)
+			nbChiffre = nbChiffre + 1
 		
 
 #affiche4Chiffres2()
@@ -114,7 +143,15 @@ def affiche4Chiffres2():
 
 
 def affiche4Chiffres3():
-	return
+	nbChiffre = 0
+	while(nbChiffre < 4):
+		print("saisissez un chiffre")
+		c = raw_input()
+		if( len(c) == 1):
+			if( ord(c) >= 48 and ord(c) <= 59):
+				#si le programme arrive la c'est a dire l'utilisateur a bien saisi un chiffre et pas un caractere
+				print("vous avez saisi : ", c)
+				nbChiffre = nbChiffre + 1
 			
 
 
@@ -134,7 +171,23 @@ def affiche4Chiffres3():
 
 
 def afficheNombre():
-    return
+	nbChiffre = 0
+	tabChiffre = []
+	while(nbChiffre < 4):
+		print("saisissez un chiffre")
+		c = input()
+		if( len(c) == 1):
+			if( ord(c) >= 48 and ord(c) <= 59):
+				#si le programme arrive la c'est a dire l'utilisateur a bien saisi un chiffre et pas un caractere
+				print("vous avez saisi : ", c)
+				tabChiffre.append(c)				
+				nbChiffre = nbChiffre + 1
+	#on affiche mnt le nombre avec une boucle
+	print("le nombre que vous avez saisi est : ")
+
+	for i in range(len(tabChiffre)):
+		print(tabChiffre[i], end="")
+	print("\n")
 
 
 
@@ -144,7 +197,20 @@ def afficheNombre():
 #Autre methode pour afficher le nombre à la fin
 
 def afficheNombre1():
-	return
+	nbChiffre = 0
+	tabChiffre = []
+	while(nbChiffre < 4):
+		print("saisissez un chiffre")
+		c = input()
+		if( len(c) == 1):
+			if( ord(c) >= 48 and ord(c) <= 59):
+				#si le programme arrive la c'est a dire l'utilisateur a bien saisi un chiffre et pas un caractere
+				print("vous avez saisi : ", c)
+				tabChiffre.append(c)				
+				nbChiffre = nbChiffre + 1
+	nombre = int(tabChiffre[0])*1000 + int(tabChiffre[1])*100 + int(tabChiffre[2])*10 + int(tabChiffre[3])
+	print("le nombre que vous avez saisi est : ", nombre)
+	
 
 
 #afficheNombre1()
@@ -154,7 +220,26 @@ def afficheNombre1():
 # affiche le nombre saisi et son double
 
 def afficheNombre2():
-	return
+	nbChiffre = 0
+	tabChiffre = []
+	while(nbChiffre < 4):
+		print("saisissez un chiffre")
+		c = input()
+		if( len(c) == 1):
+			if( ord(c) >= 48 and ord(c) <= 59):
+				#si le programme arrive la c'est a dire l'utilisateur a bien saisi un chiffre et pas un caractere
+				print("vous avez saisi : ", c)
+				tabChiffre.append(c)				
+				nbChiffre = nbChiffre + 1
+	nombre = int(tabChiffre[0])*1000 + int(tabChiffre[1])*100 + int(tabChiffre[2])*10 + int(tabChiffre[3])
+	print("le nombre que vous avez saisi est : ", nombre, "le double de ce nombre est :", nombre*2)
+	
+
+
 
 afficheNombre2()
+
+
+
+
 
